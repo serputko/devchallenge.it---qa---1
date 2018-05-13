@@ -30,13 +30,15 @@ sh apache-jmeter-4.0/bin/jmeter.sh -nt scenarios/pets_api_testing.jmx -eo Report
 # Windows
 Open test with jmeter GUI(for detailed results)
 ```
-.\apache-jmeter-4.0\bin\jmeter.bat -t scenarios\pets_api_testing.jmx
+cd apache-jmeter-4.0\
+.\bin\jmeter.bat -t ..\scenarios\pets_api_testing.jmx
 ```
 
 Run test in non GUI mode(Preferable)
 ```
 rmdir .\Report\ /s /q
-.\apache-jmeter-4.0\bin\jmeter.bat -nt scenarios\pets_api_testing.jmx -eo Report\ -fl report.csv
+cd apache-jmeter-4.0\
+.\bin\jmeter.bat -nt ..\scenarios\pets_api_testing.jmx -eo ..\Report\ -fl report.csv
 ```
 
 To view test results please open index.html file in Report/ directory
